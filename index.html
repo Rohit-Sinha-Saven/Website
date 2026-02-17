@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rohit Sinha - Marriage Profile</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#ffecd2,#fcb69f);
+color:#333;
+scroll-behavior:smooth;
+}
+
+header{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+url("https://images.unsplash.com/photo-1529636798458-92182e662485") center/cover;
+color:white;
+}
+
+header h1{
+font-size:60px;
+font-weight:700;
+}
+
+header p{
+font-size:22px;
+margin-top:10px;
+}
+
+.btn{
+margin-top:20px;
+padding:12px 25px;
+border:none;
+border-radius:25px;
+background:#ff7e5f;
+color:white;
+cursor:pointer;
+font-size:16px;
+transition:.3s;
+}
+
+.btn:hover{
+background:#ff4e50;
+transform:scale(1.05);
+}
+
+section{
+padding:80px 10%;
+background:white;
+margin-bottom:10px;
+}
+
+h2{
+text-align:center;
+margin-bottom:30px;
+font-size:32px;
+color:#ff4e50;
+}
+
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.about-grid img{
+width:100%;
+border-radius:20px;
+box-shadow:0 10px 20px rgba(0,0,0,.2);
+}
+
+.details{
+background:#fff5f3;
+padding:20px;
+border-radius:15px;
+line-height:2;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:#fff5f3;
+padding:20px;
+border-radius:15px;
+text-align:center;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 10px 20px rgba(0,0,0,.1);
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+}
+
+.gallery img{
+width:100%;
+border-radius:15px;
+transition:.3s;
+cursor:pointer;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:#ff7e5f;
+color:white;
+}
+
+.modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.6);
+justify-content:center;
+align-items:center;
+}
+
+.modal-content{
+background:white;
+padding:30px;
+border-radius:15px;
+width:90%;
+max-width:400px;
+text-align:center;
+}
+
+input,textarea{
+width:100%;
+padding:10px;
+margin:10px 0;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+@media(max-width:768px){
+.about-grid{
+grid-template-columns:1fr;
+}
+header h1{
+font-size:40px;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Rohit Sinha</h1>
+<p>Looking for a Life Partner ❤️</p>
+<button class="btn" onclick="openModal()">Express Interest</button>
+</header>
+
+<section>
+<h2>About Me</h2>
+<div class="about-grid">
+<img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e">
+<div class="details">
+<p><strong>Age:</strong> 30</p>
+<p><strong>Location:</strong> India</p>
+<p><strong>Profession:</strong> Software Tester</p>
+<p><strong>Education:</strong> Graduate</p>
+<p><strong>Religion:</strong> Hindu</p>
+<p><strong>Height:</strong> 5'9"</p>
+<p><strong>About:</strong> Friendly, family-oriented and career focused person who believes in honesty and respect.</p>
+</div>
+</div>
+</section>
+
+<section>
+<h2>Personality & Interests</h2>
+<div class="cards">
+<div class="card">💻 Technology Lover</div>
+<div class="card">✈️ Traveling</div>
+<div class="card">🎵 Music</div>
+<div class="card">🏋️ Fitness</div>
+<div class="card">🍽️ Food Explorer</div>
+<div class="card">📚 Learning</div>
+</div>
+</section>
+
+<section>
+<h2>Photo Gallery</h2>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e">
+<img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde">
+<img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12">
+<img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2">
+</div>
+</section>
+
+<section>
+<h2>Looking For</h2>
+<div class="details">
+<p>✔ Kind and caring nature</p>
+<p>✔ Family values</p>
+<p>✔ Good sense of humor</p>
+<p>✔ Supportive and understanding</p>
+<p>✔ Positive mindset</p>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Rohit Sinha | Marriage Profile</p>
+</footer>
+
+<div class="modal" id="contactModal">
+<div class="modal-content">
+<h3>Express Interest 💌</h3>
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<textarea placeholder="Message"></textarea>
+<button class="btn" onclick="submitForm()">Send</button>
+<button class="btn" onclick="closeModal()" style="background:#ccc;color:black;">Close</button>
+</div>
+</div>
+
+<script>
+
+function openModal(){
+document.getElementById("contactModal").style.display="flex";
+}
+
+function closeModal(){
+document.getElementById("contactModal").style.display="none";
+}
+
+function submitForm(){
+alert("Thank you! Your interest has been sent 😊");
+closeModal();
+}
+
+</script>
+
+</body>
+</html>
